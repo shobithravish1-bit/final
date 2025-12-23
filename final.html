@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever 🤍</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    margin:0;
+    height:100vh;
+    background: radial-gradient(circle at top, #1b2a4a, #0b1220);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#e6ecff;
+    overflow:hidden;
+}
+
+/* Soft stars */
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    opacity:0.6;
+    border-radius:50%;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+    0%,100%{opacity:0.2;}
+    50%{opacity:0.8;}
+}
+
+/* Container */
+.container{
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(14px);
+    padding:32px;
+    border-radius:28px;
+    width:90%;
+    max-width:380px;
+    text-align:center;
+    animation: fadeIn 1.6s ease;
+}
+
+h1{
+    font-size:24px;
+    margin-bottom:14px;
+    font-weight:500;
+}
+
+p{
+    font-size:15px;
+    line-height:1.7;
+    opacity:0.95;
+    margin-bottom:28px;
+}
+
+/* Heart */
+.heart{
+    font-size:36px;
+    animation: pulse 2.5s infinite;
+}
+
+/* Button */
+button{
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    background: rgba(255,255,255,0.9);
+    color:#1b2a4a;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    animation: breathe 3s infinite ease-in-out;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(24px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+    100%{transform:scale(1);}
+}
+
+@keyframes breathe{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.06);}
+    100%{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Stars -->
+<script>
+for(let i=0;i<45;i++){
+    const star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random()*100 + "%";
+    star.style.top = Math.random()*100 + "%";
+    star.style.animationDelay = Math.random()*3 + "s";
+    document.body.appendChild(star);
+}
+</script>
+
+<div class="container">
+    <div class="heart">🤍</div>
+
+    <h1>Forever</h1>
+
+    <p>
+        Darling this is the end of the website <br><br>
+        But what I feel for you doesn’t end <br>
+        Not today. Not tomorrow.<br>
+        Not ever.<br><br>
+        If you ever forget how loved you are,<br>
+        remember I am there
+    </p>
+
+    <button onclick="closePage()">Always ❤️</button>
+</div>
+
+<script>
+function closePage(){
+    alert("Darling Happy Birthday and i love you❤️❤️");
+}
+</script>
+
+</body>
+</html>
